@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  compliance-operator-chart:
+  - apiVersion: v2
+    appVersion: 0.1.53
+    created: "2023-10-23T03:44:34.257026935Z"
+    description: A Helm chart for Kubernetes
+    digest: f755298d6442bafcc1c6e0eac3e29419972c8127a4b944f04c85db8b3655c651
+    name: compliance-operator-chart
+    type: application
+    urls:
+    - https://github.com/OpenComplianceAsCode/charts/releases/download/compliance-operator-chart-0.1.0/compliance-operator-chart-0.1.0.tgz
+    version: 0.1.0
+generated: "2023-10-23T03:44:34.257033835Z"
