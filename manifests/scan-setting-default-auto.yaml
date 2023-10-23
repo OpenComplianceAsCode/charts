@@ -1,0 +1,28 @@
+apiVersion: compliance.openshift.io/v1alpha1
+autoApplyRemediations: true
+autoUpdateRemediations: true
+kind: ScanSetting
+metadata:
+  name: 'default-auto-apply'
+  namespace: openshift-compliance
+rawResultStorage:
+  pvAccessModes:
+    - ReadWriteOnce
+  rotation: 3
+  size: 1Gi
+  tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+roles:
+  - '@all'
+scanTolerations:
+  - operator: Exists
+schedule: 0 * * * *
+showNotApplicable: false
+strictNodeScan: true

@@ -1,0 +1,8 @@
+apiVersion: compliance.openshift.io/v1alpha1
+kind: ProfileBundle
+metadata:
+  name: 'ocp4'
+  namespace: openshift-compliance
+spec:
+  contentFile: ssg-ocp4-ds.xml
+  contentImage: ghcr.io/complianceascode/k8scontent:latest
